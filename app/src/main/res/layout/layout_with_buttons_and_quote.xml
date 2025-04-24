@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#F5F5F5">
+
+    <!-- Recommended Section -->
+    <TextView
+
+        android:id="@+id/recommendedTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recommended"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Education Section -->
+    <TextView
+        android:id="@+id/educationTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EDUCATION"
+        android:textSize="18sp"
+        android:textColor="#4CAF50"
+        android:layout_marginBottom="4dp"/>
+
+    <Button
+        android:id="@+id/selectCause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Cause"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#4CAF50"
+        android:layout_marginBottom="12dp"/>
+
+    <!-- Food Companies Section -->
+    <TextView
+        android:id="@+id/foodCompaniesTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Food Companies"
+        android:textSize="18sp"
+        android:textColor="#FF9800"
+        android:layout_marginBottom="4dp"/>
+
+    <Button
+        android:id="@+id/getFood"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#FF9800"
+        android:layout_marginBottom="12dp"/>
+
+    <!-- Clothes Section -->
+    <TextView
+        android:id="@+id/clothesTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clothes"
+        android:textSize="18sp"
+        android:textColor="#2196F3"
+        android:layout_marginBottom="4dp"/>
+
+    <Button
+        android:id="@+id/getClothes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#2196F3"
+        android:layout_marginBottom="12dp"/>
+
+    <!-- Help Or Donate Section -->
+    <TextView
+        android:id="@+id/helpOrDonateTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Help Or Donate"
+        android:textSize="18sp"
+        android:textColor="#9C27B0"
+        android:layout_marginBottom="4dp"/>
+
+    <Button
+        android:id="@+id/donateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Donate"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#9C27B0"
+        android:layout_marginBottom="12dp"/>
+
+    <!-- Motivational Quote -->
+    <TextView
+        android:id="@+id/quoteText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="We make a living by what we get, but we make a life by what we give. Only a life lived for others is a life worthwhile. I don't know what your destiny will be, but one thing I do know: the only ones among you who will be really happy are those who have sought and found how to serve."
+        android:textSize="14sp"
+        android:textColor="#616161"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:background="#FFFFFF"
+        android:layout_marginBottom="8dp"/>
+
+</LinearLayout>

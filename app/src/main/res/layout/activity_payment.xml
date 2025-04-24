@@ -1,18 +1,29 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:background="@color/backgroundColor"
+    android:background="#FFFFFF"
     android:padding="24dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <LinearLayout
         android:orientation="vertical"
+        android:gravity="center"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:src="@drawable/image_interest"
+            android:layout_centerInParent="true"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:contentDescription="SmartCash Logo" />
+
 
         <TextView
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             android:text="Mobile Payment"
+            android:textStyle="bold"
             android:textSize="22sp"
             android:textColor="@color/black"
             android:layout_marginBottom="16dp"/>
@@ -38,13 +49,14 @@
 
         <Spinner
             android:id="@+id/providerSpinner"
+
             android:layout_marginBottom="16dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
         <Button
             android:id="@+id/btnPay"
-            android:text="Pay Now"
+            android:text="Donate"
             android:backgroundTint="@color/greenTheme"
             android:textColor="@color/black"
 

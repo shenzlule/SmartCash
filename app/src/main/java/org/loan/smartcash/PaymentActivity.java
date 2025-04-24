@@ -1,13 +1,16 @@
 package org.loan.smartcash;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import org.loan.smartcash.models.PaymentRequest;
 
@@ -21,6 +24,13 @@ public class PaymentActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_payment);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            Window window = getWindow();
+
+            window.setStatusBarColor(ContextCompat.getColor(this, R.color.greenTheme));
+//            window.setNavigationBarColor(ContextCompat.getColor(this, R.color.greenTheme));
+        }
 
         initializeViews();
         setListeners();

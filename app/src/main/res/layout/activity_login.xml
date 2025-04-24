@@ -7,6 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!-- Title: Login -->
     <TextView
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
@@ -16,6 +17,7 @@
         android:layout_marginBottom="32dp"
         android:layout_gravity="center"/>
 
+    <!-- Email Input -->
     <EditText
         android:id="@+id/inputEmail"
         android:hint="Email"
@@ -26,6 +28,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
+    <!-- Password Input -->
     <EditText
         android:id="@+id/inputPassword"
         android:hint="Password"
@@ -36,6 +39,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
+    <!-- Login Button -->
     <Button
         android:id="@+id/btnLogin"
         android:text="Login"
@@ -43,4 +47,17 @@
         android:textColor="@color/black"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
+
+    <!-- No Account? Register Text -->
+    <TextView
+        android:id="@+id/noAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No account? Register"
+        android:textSize="16sp"
+        android:textColor="@color/primaryColor"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center"
+        android:onClick="goToRegisterScreen"/>
+
 </LinearLayout>

@@ -1,11 +1,17 @@
 package org.loan.smartcash;
 
+import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import org.loan.smartcash.database.AppDatabase;
 import org.loan.smartcash.models.User;
@@ -16,6 +22,9 @@ public class RegisterActivity extends AppCompatActivity {
     EditText email, password;
     Button btnRegister;
 
+    TextView alreadyHaveAccount;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +34,24 @@ public class RegisterActivity extends AppCompatActivity {
         password = findViewById(R.id.inputPassword);
         btnRegister = findViewById(R.id.btnRegister);
 
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            Window window = getWindow();
+
+            window.setStatusBarColor(ContextCompat.getColor(this, R.color.greenTheme));
+            window.setNavigationBarColor(ContextCompat.getColor(this, R.color.greenTheme));
+        }
+
+
+        alreadyHaveAccount = findViewById(R.id.alreadyHaveAccount);
+
+        // Set OnClickListener for Login link
+        alreadyHaveAccount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Navigate to the Login screen
+                goToLoginScreen();
+            }
+        });
         btnRegister.setOnClickListener(v -> {
             String userEmail = email.getText().toString();
             String userPassword = password.getText().toString();
@@ -42,5 +69,14 @@ public class RegisterActivity extends AppCompatActivity {
                 }
             });
         });
+    }
+
+
+    // Method to navigate to Login screen
+    private void goToLoginScreen() {
+        // Start the Login Activity
+        Intent intent = new Intent(RegisterActivity.this, LoginActivity.class); // Replace with actual LoginActivity class
+        startActivity(intent);
+        finish();
     }
 }

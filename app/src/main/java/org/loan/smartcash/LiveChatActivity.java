@@ -1,11 +1,14 @@
 package org.loan.smartcash;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.EditText;
 import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -26,6 +29,14 @@ public class LiveChatActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_live_chat);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            Window window = getWindow();
+
+            window.setStatusBarColor(ContextCompat.getColor(this, R.color.greenTheme));
+//            window.setNavigationBarColor(ContextCompat.getColor(this, R.color.greenTheme));
+        }
+
 
         recyclerView = findViewById(R.id.recyclerChat);
         messageInput = findViewById(R.id.editMessage);

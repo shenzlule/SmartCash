@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:padding="24dp"
@@ -6,6 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!-- Title: Register -->
     <TextView
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
@@ -15,6 +17,7 @@
         android:layout_marginBottom="32dp"
         android:layout_gravity="center"/>
 
+    <!-- Email Input -->
     <EditText
         android:id="@+id/inputEmail"
         android:hint="Email"
@@ -25,6 +28,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
+    <!-- Password Input -->
     <EditText
         android:id="@+id/inputPassword"
         android:hint="Password"
@@ -35,6 +39,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
+    <!-- Register Button -->
     <Button
         android:id="@+id/btnRegister"
         android:text="Register"
@@ -42,4 +47,17 @@
         android:textColor="@color/black"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
+
+    <!-- Already have an account? Login -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Already have an account? Login"
+        android:textSize="16sp"
+        android:id="@+id/alreadyHaveAccount"
+        android:textColor="@color/primaryColor"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center"
+        android:onClick="goToLoginScreen"/>
+
 </LinearLayout>
